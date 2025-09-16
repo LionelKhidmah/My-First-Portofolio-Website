@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: url("bacground.jpeg") no-repeat center / cover;
+    padding: 50px 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    gap: 3rem;
+    margin-bottom: 30px;
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+}
+
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-color: #ffff;
+}
+
+.about-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #ffff;
+    margin-top: 100px;
+    margin-left: 30px;
+    border-left: 3px solid #ffff;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.about-text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left:30px ;
+    color: #ffff;
+    margin-top: 20px;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.educational-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #ffff;
+    margin-top: 15px;
+    margin-left: 30px;
+    border-left: 3px solid #ffff;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.educational-text {
+    margin-left:30px ;
+    color: #ffff;
+    margin-top: 20px;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
